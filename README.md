@@ -4,7 +4,7 @@ This code example shows how to set up an Infineon MCU's USB block as a communica
 
 [View this README on GitHub.](https://github.com/Infineon/mtb-example-usb-host-cdc-echo)
 
-[Provide feedback on this code example.](https://cypress.co1.qualtrics.com/jfe/form/SV_1NTns53sK2yiljn?Q_EED=eyJVbmlxdWUgRG9jIElkIjoiQ0UyMzY0ODYiLCJTcGVjIE51bWJlciI6IjAwMi0zNjQ4NiIsIkRvYyBUaXRsZSI6ImVtVVNCIEhvc3Q6IENEQyBlY2hvIGFwcGxpY2F0aW9uIiwicmlkIjoic2hla2hhcmhpbWFuIiwiRG9jIHZlcnNpb24iOiIxLjEuMCIsIkRvYyBMYW5ndWFnZSI6IkVuZ2xpc2giLCJEb2MgRGl2aXNpb24iOiJNQ0QiLCJEb2MgQlUiOiJJQ1ciLCJEb2MgRmFtaWx5IjoiUFNPQyJ9)
+[Provide feedback on this code example.](https://cypress.co1.qualtrics.com/jfe/form/SV_1NTns53sK2yiljn?Q_EED=eyJVbmlxdWUgRG9jIElkIjoiQ0UyMzY0ODYiLCJTcGVjIE51bWJlciI6IjAwMi0zNjQ4NiIsIkRvYyBUaXRsZSI6ImVtVVNCIEhvc3Q6IENEQyBlY2hvIGFwcGxpY2F0aW9uIiwicmlkIjoic2hla2hhcmhpbWFuIiwiRG9jIHZlcnNpb24iOiIxLjIuMCIsIkRvYyBMYW5ndWFnZSI6IkVuZ2xpc2giLCJEb2MgRGl2aXNpb24iOiJNQ0QiLCJEb2MgQlUiOiJJQ1ciLCJEb2MgRmFtaWx5IjoiUFNPQyJ9)
 
 
 ## Requirements
@@ -149,7 +149,19 @@ For a list of supported IDEs and more details, see the "Exporting to IDEs" secti
 
 </details>
 
+<br />
 
+**Note:** For enabling/disabling power in VBUS line, ensure defining the following macro in usbh_config.c for the corresponding kit in use.
+
+**Table 1. Macro for enabling/disabling power in VBUS line**
+
+ Kit  |  Macro           |    Pin_number
+ :-------- | :---------------------- | :------------
+ CY8CKIT-062-WIFI-BT | USBH_POWER_CONTROL_PIN               | P13_2 
+ CY8CKIT-062S2-43012| USBH_POWER_CONTROL_PIN | P1_2
+ CYW9P62S1-43438EVB-01| USBH_POWER_CONTROL_PIN          | P1_2
+
+ 
 ## Operation
 
 1. Connect the board to your PC using the provided USB cable through the KitProg3 USB connector.
@@ -241,7 +253,7 @@ When a USB CDC device with echo functionality is connected to the host via a USB
 
 ## Resources and settings
 
-**Table 1. Application resources**
+**Table 2. Application resources**
 
  Resource  |  Alias/object           |    Purpose
  :-------- | :---------------------- | :------------
@@ -284,6 +296,7 @@ Document title: CE236486 - emUSB host: CDC echo application
 | ------- | --------------------- |
 | 1.0.0   | New code example      |
 | 1.1.0   | Added support for CY8CKIT-062S2-43012, CYW9P62S1-43438EVB-01, CY8CEVAL-062S2, CY8CEVAL-062S2-LAI-4373M2, CY8CEVAL-062S2-MUR-43439M2, and CY8CEVAL-062S2-LAI-43439M2
+1.2.0     | Updated design.modus file for CY8CKIT-062-WIFI-BT, Readme.md
 ------
 <br />
 

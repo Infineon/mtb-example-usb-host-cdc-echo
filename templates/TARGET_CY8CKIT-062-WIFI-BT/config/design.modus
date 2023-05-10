@@ -135,20 +135,6 @@
                 <Block location="ioss[0].port[13].pin[1]">
                     <Alias value="CYBSP_D9"/>
                 </Block>
-                <Block location="ioss[0].port[13].pin[2]">
-                    <Personality template="pin" version="3.0">
-                        <Param id="DriveModes" value="CY_GPIO_DM_PULLUP_IN_OFF"/>
-                        <Param id="initialState" value="1"/>
-                        <Param id="nonSec" value="1"/>
-                        <Param id="vtrip" value="CY_GPIO_VTRIP_CMOS"/>
-                        <Param id="isrTrigger" value="CY_GPIO_INTR_DISABLE"/>
-                        <Param id="slewRate" value="CY_GPIO_SLEW_FAST"/>
-                        <Param id="driveStrength" value="CY_GPIO_DRIVE_1_2"/>
-                        <Param id="sioOutputBuffer" value="true"/>
-                        <Param id="pullUpRes" value="CY_GPIO_PULLUP_RES_DISABLE"/>
-                        <Param id="inFlash" value="true"/>
-                    </Personality>
-                </Block>
                 <Block location="ioss[0].port[13].pin[6]">
                     <Alias value="CYBSP_J2_19"/>
                 </Block>
@@ -436,6 +422,7 @@
                     <Personality template="fll" version="4.0">
                         <Param id="configuration" value="auto"/>
                         <Param id="desiredFrequency" value="100.000"/>
+                        <Param id="enableOutputDivider" value="false"/>
                     </Personality>
                 </Block>
                 <Block location="srss[0].clock[0].hfclk[0]">
